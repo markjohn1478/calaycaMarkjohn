@@ -10,13 +10,13 @@ class Product extends Model
     use HasFactory;
 
     protected $table = 'products';
+    protected $fillable = ['product_name', 'price', 'description', 'image', 'category_id']; 
 
-    protected $fillable = [
-        'product_name', 'price', 'description', 'image'
-    ];
-
-    public function carts()
+    public function category()
     {
-        return $this->hasMany(Cart::class, 'product_id');
+        return $this->belongsTo(Category::class, 'category_id', 'id');
     }
 }
+
+
+

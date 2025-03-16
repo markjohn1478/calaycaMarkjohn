@@ -1,8 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TransactionController;
 
-Route::get('/users', [TransactionController::class, 'getUsers']); // Level 1
-Route::get('/products', [TransactionController::class, 'getProducts']); // Level 2
-Route::get('/transactions', [TransactionController::class, 'getTransactions']); // Level 3
-Route::get('/user-transactions/{id}', [TransactionController::class, 'getUserTransactions']); // Level 4
+Route::get('/users', [TransactionController::class, 'getUsers']); 
+Route::get('/products', [TransactionController::class, 'getProducts']); 
+Route::get('/categories', [TransactionController::class, 'getCategories']); 
+Route::get('/transactions', [TransactionController::class, 'getTransactions']); 

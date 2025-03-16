@@ -12,7 +12,7 @@ class Transaction extends Model
     protected $table = 'transaction';
 
     protected $fillable = [
-        'user_id', 'price', 'type', 'date_completed', 'contact_number', 'Address', 'pickup_date'
+        'user_id', 'price', 'type', 'date_completed', 'contact_number', 'address', 'pickup_date'
     ];
 
     public function user()
@@ -20,3 +20,4 @@ class Transaction extends Model
         return $this->belongsTo(User::class, 'user_id');
     }
 }
+
